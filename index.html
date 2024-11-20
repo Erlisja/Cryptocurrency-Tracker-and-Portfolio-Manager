@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+<!-- My scripts-->
+ <script defer src="./scripts/api.js"></script>
+<script type="module"  defer src="./scripts/ui.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.min.js"></script>
+
+
+    <title>Crypto Tracker and Portfolio Manager</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Crypto Tracker</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./pages/portfolio.html">Portfolio</a></li>
+            <li><a href="#market">Market Overview</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+      <!-- Main Content -->
+      <main>
+        <!-- Market Overview Section -->
+        <section id="market">
+          <h2>Market Overview</h2>
+          <input type="text" id="searchCrypto" placeholder="Search for a cryptocurrency...">
+          
+        </section>
+    
+        <!-- Portfolio Management Section -->
+        <section id="portfolio">
+          <h2>Portfolio Manager</h2>
+          <div id="portfolioTable"></div>
+        </section>
+    
+        <div id="cryptoList">
+            <div id="cryptoList">
+                <table id="cryptoTable">
+                 <tr id="cryptoHeader">
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Current Price</th>
+                <th> Market Cap</th>
+                <th>Total Volume</th>
+                <th>Price Change % (24h)</th>
+            </tr>
+    
+    
+            
+    
+            </table>
+        </div>
+        </section>
+    
+
+        <!-- Portfolio Chart -->
+       
+      </main>
+    
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Crypto Tracker. All Rights Reserved.</p>
+      </footer>
+    
+      <!-- JavaScript -->
+      <script type="module" src="js/ui.js"></script>
+    
+</body>
+</html>
