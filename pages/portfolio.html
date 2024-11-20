@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- Header Section -->
+     <header>
+     <h1>Crypto Tracker</h1>
+     <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a href="">Portfolio</a></li>
+          <li><a href="#market">Market Overview</a></li>
+        </ul>
+     </nav>
+    </header>
+
+         <!-- Portfolio Management Section -->
+         <section id="portfolio">
+            <h2>Portfolio Manager</h2>
+            <form id="addCryptoForm">
+              <label for="cryptoSelect">Cryptocurrency:</label>
+              <select id="cryptoSelect"></select>
+      
+              <label for="cryptoAmount">Amount Owned:</label>
+              <input type="number" id="cryptoAmount" step="0.01" required>
+      
+              <label for="purchaseDate">Date Purchased:</label>
+              <input type="date" id="purchaseDate" required>
+      
+              <button type="submit">Add to Portfolio</button>
+            </form>
+            <div id="portfolioTable"></div>
+          </section>
+
+          <!-- Footer Section-->
+            <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Crypto Tracker. All Rights Reserved.</p>
+      </footer>
+
+    
+</body>
+</html>

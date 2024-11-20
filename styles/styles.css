@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  .crypto-item {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+/* table styles */
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #333;
+        color: white;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
