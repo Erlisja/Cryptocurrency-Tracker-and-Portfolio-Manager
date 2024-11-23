@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <script defer type="module" src="../scripts/portfolio.js"></script>
+    <script defer type="module" src="../scripts/ui.js"></script>
     <title>Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header Section -->
-     <header>
-     <h1>Crypto Tracker</h1>
-     <nav>
+    <header>
+      <h1>Crypto Tracker</h1>
+      <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li class="active"><a href="">Portfolio</a></li>
           <li><a href="#market">Market Overview</a></li>
         </ul>
-     </nav>
+      </nav>
     </header>
 
-         <!-- Portfolio Management Section -->
-         <section id="portfolio">
-            <h2>Portfolio Manager</h2>
-            <form id="addCryptoForm">
-              <label for="cryptoSelect">Cryptocurrency:</label>
-              <select id="cryptoSelect"></select>
-      
-              <label for="cryptoAmount">Amount Owned:</label>
-              <input type="number" id="cryptoAmount" step="0.01" required>
-      
-              <label for="purchaseDate">Date Purchased:</label>
-              <input type="date" id="purchaseDate" required>
-      
-              <button type="submit">Add to Portfolio</button>
-            </form>
-            <div id="portfolioTable"></div>
-          </section>
+    <!-- Portfolio Management Section -->
+    <section id="portfolioTitle">
+      <h2>Portfolio Manager</h2>
+    </section>
 
-          <!-- Footer Section-->
-            <!-- Footer -->
-      <footer>
-        <p>&copy; 2024 Crypto Tracker. All Rights Reserved.</p>
-      </footer>
+    <section id="portfolio">
+      <img
+        src="../images/portfolioImg.png"
+        alt="Portfolio Image"
+        width="200px"
+        height="250px"
+      />
+      <h3>What coins are you researching today?</h3>
+      <h5>
+        Keep track of coins that you're interested in and receive large mover
+        price alerts
+      </h5>
+      <button id="addCoin">+ Add Coin</button>
+    </section>
 
-    
-</body>
+    <!-- Popup Window -->
+    <div id="coinPopup" class="popup hidden">
+      <div class="popup-content">
+        <h3>Select Coins to Add to Your Portfolio</h3>
+        <input
+          type="text"
+          id="searchCrypto"
+          placeholder="Search for a coin..."
+        />
+        <table id="coinTable"class="coinTable hidden">
+          <thead>
+            <tr>
+              <th>Icon</th>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Add</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="closePopup">Close</button>
+      </div>
+    </div>
+
+    <!-- Portfolio Table Section -->
+    <section id="portfolioTable" class="portfolioTable hidden">
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Market Cap</th>
+            <th>Volume</th>
+            <th>Change</th>
+            <!--  icon for removing coin from portfolio -->
+            <th>
+              <icon class="material-icons">delete</icon>     
+              />
+            </th> 
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <!-- Footer Section-->
+    <footer id="footerSection">
+      <p>&copy; 2024 Crypto Tracker. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>

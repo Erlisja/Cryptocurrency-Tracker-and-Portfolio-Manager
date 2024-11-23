@@ -3,72 +3,218 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
-  
-  header {
+}
+
+header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-  }
-  
-  nav li {
+}
+
+nav li {
     margin: 0 1rem;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  main {
+}
+
+main {
     padding: 2rem;
-  }
-  
-  section {
+}
+
+section {
     margin-bottom: 2rem;
-  }
-  
-  .crypto-item {
+}
+
+.crypto-item {
     background-color: #fff;
     padding: 1rem;
     margin: 0.5rem 0;
     border-radius: 8px;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
-  }
-  
+}
+
 /* table styles */
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-    th {
-        background-color: #333;
-        color: white;
-    }
+th {
+    background-color: #333;
+    color: white;
+}
 
-    th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
 
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* crypto form */
+#crypto-form {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+}
+
+/* portfolio container */
+#portfolioTitle {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#footerSection {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 35px auto 20px;
+    padding: 10px;
+
+}
+
+#addCoin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px 50px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #11bc1d;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
     
+}
+
+.popup-content h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#searchBar {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#coinTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#coinTable th,
+#coinTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#coinTable th {
+    background-color: #f4f4f4;
+}
+#coinTable th {
+    color: #fff;
+    background-color: #333;
+    margin-top: 15px;
+
+}
+#coin {
+    background-color: #f2f2f2;
+}
+
+.star {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.star.selected {
+    color: gold;
+}
+
+#closePopup {
+    align-self: center;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ /* the searchBar */
+.popup-content #searchCrypto{
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+
+  
+}
