@@ -8,7 +8,8 @@ const popup = document.getElementById("coinPopup");
 const closePopupButton = document.getElementById("closePopup");
 const searchBar = document.getElementById("searchCrypto");
 const coinTableBody = document.getElementById("coinTable").querySelector("tbody");
-
+// Select the div where the portfolio content will be rendered
+const divContent = document.getElementById("portfolio");
 
 let allCoins = {}; // Store all fetched coins
 const selectedCoins = new Set(); // Store selected coin symbols to add to the portfolio
@@ -25,7 +26,7 @@ addCoinButton.addEventListener("click", () => {
 
 // Close the popup
 closePopupButton.addEventListener("click", () => {
-    popup.classList.add("hidden");
+    popup.classList.add("hidden");   
     divContent.classList.add("hidden");
     createPortfolio(); // Render the selected coins table when the popup closes
     console.log("Popup closed and portfolio rendered");
@@ -34,7 +35,7 @@ closePopupButton.addEventListener("click", () => {
 
 });
 
-
+// function to render the coin table
 function renderCoinTable(coins) {
     //const coinTableBody = document.getElementById('coinsTableBody');
     coinTableBody.innerHTML = ''; // Clear the table
@@ -78,9 +79,6 @@ async function fetchAndDisplayCoins() {
 }
 
 // function to toggle coin selection
-// Add or remove the selected coin symbol from the Set
-// Update the star icon to show selection status
-
 function toggleCoinSelection(symbol) {
     if (selectedCoins.has(symbol)) {
         selectedCoins.delete(symbol);
@@ -193,20 +191,18 @@ function renderSelectedCoinsTable() {
           <td>${coin.priceUsd ? coin.priceUsd.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) : 'N/A'}</td>
           <td>${coin.marketCapUsd ? coin.marketCapUsd.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) : 'N/A'}</td>
          <td>${coin.volumeUsd24Hr ? coin.volumeUsd24Hr.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) : 'N/A'}</td>
-        <td> ${coin.changePercent24Hr ? `${Math.floor((coin.changePercent24Hr) * 1000) / 1000}%` : 'N/A'} </td>
+        <td> ${coin.changePercent24Hr ? `${Math.floor((coin.changePercent24Hr)*1000)/1000}%` : 'N/A'} </td>
             
         `;
         selectedCoinsTableBody.appendChild(row);
     });
 }
 
-
-// Function to create the portfolio table
+// Function to create the portfolio
 function createPortfolio() {
     const portfolioIntroContent = document.querySelector('#portfolio .introContent');
     const portfolioTable = document.getElementById('portfolioTable');
 
-    // Check if there are selected coins
     if (selectedCoins.size > 0) {
         // Hide the introductory content
         if (portfolioIntroContent) portfolioIntroContent.classList.add('hidden');
