@@ -55,6 +55,7 @@ footer {
 table {
     width: 100%;
     border-collapse: collapse;
+    border: 1.5px solid #0e0e0e;
 }
 
 th {
@@ -85,7 +86,6 @@ tr:nth-child(even) {
 /* portfolio container */
 #portfolioTitle {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -100,16 +100,17 @@ tr:nth-child(even) {
     width: 100%;
 }
 
-#portfolio {
+#portfolio, .introContent {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     align-content: center;
+    justify-content: center;
     margin: 35px auto 20px;
     padding: 10px;
-
 }
+
 
 #addCoin {
     display: flex;
@@ -141,6 +142,7 @@ tr:nth-child(even) {
     border-radius: 8px;
     width: 80%;
     max-width: 600px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .popup-content {
@@ -175,9 +177,7 @@ tr:nth-child(even) {
     text-align: center;
 }
 
-#coinTable th {
-    background-color: #f4f4f4;
-}
+
 #coinTable th {
     color: #fff;
     background-color: #333;
@@ -185,7 +185,7 @@ tr:nth-child(even) {
 
 }
 #coin {
-    background-color: #f2f2f2;
+    background-color: #8c4f4f;
 }
 
 .star {
@@ -213,8 +213,6 @@ tr:nth-child(even) {
     padding: 5px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-
-
-  
+    border-radius: 4px;  
 }
+

@@ -15,7 +15,7 @@
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li class="active"><a href="">Portfolio</a></li>
+          <li class="active"><a href="#">Portfolio</a></li>
           <li><a href="#market">Market Overview</a></li>
         </ul>
       </nav>
@@ -26,20 +26,43 @@
       <h2>Portfolio Manager</h2>
     </section>
 
-    <section id="portfolio">
-      <img
-        src="../images/portfolioImg.png"
-        alt="Portfolio Image"
-        width="200px"
-        height="250px"
-      />
-      <h3>What coins are you researching today?</h3>
-      <h5>
-        Keep track of coins that you're interested in and receive large mover
-        price alerts
-      </h5>
-      <button id="addCoin">+ Add Coin</button>
-    </section>
+    <div id="portfolio" class="portfolio hidden">
+      <div class="introContent">
+        <img
+          src="../images/portfolioImg.png"
+          alt="An illustrative portfolio image"
+          width="200px"
+          height="250px"
+        />
+        <h3>What coins are you researching today?</h3>
+        <p>
+          Keep track of coins that you're interested in and receive large mover
+          price alerts.
+        </p>
+        <button id="addCoin">+ Add Coin</button>
+      </div>
+
+      <!-- Portfolio Table Section -->
+      <div id="portfolioTable" class="portfolioTable hidden">
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>Market Cap</th>
+              <th>Volume</th>
+              <th>Change</th>
+              <!-- <th>
+                <span class="material-icons">delete</span>
+              </th> -->
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
 
     <!-- Popup Window -->
     <div id="coinPopup" class="popup hidden">
@@ -50,7 +73,7 @@
           id="searchCrypto"
           placeholder="Search for a coin..."
         />
-        <table id="coinTable"class="coinTable hidden">
+        <table id="coinTable" class="coinTable hidden">
           <thead>
             <tr>
               <th>Icon</th>
@@ -65,28 +88,6 @@
       </div>
     </div>
 
-    <!-- Portfolio Table Section -->
-    <section id="portfolioTable" class="portfolioTable hidden">
-      <table>
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Symbol</th>
-            <th>Price</th>
-            <th>Market Cap</th>
-            <th>Volume</th>
-            <th>Change</th>
-            <!--  icon for removing coin from portfolio -->
-            <th>
-              <icon class="material-icons">delete</icon>     
-              />
-            </th> 
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
     <!-- Footer Section-->
     <footer id="footerSection">
       <p>&copy; 2024 Crypto Tracker. All Rights Reserved.</p>
